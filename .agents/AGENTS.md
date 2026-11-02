@@ -54,6 +54,7 @@ Use the skill that matches the deliverable the user needs:
 - `specification-authoring`: use when the user needs a full technical specification with requirements, constraints, interfaces, and acceptance criteria.
 
 Avoid switching between multiple skills for the same request unless the user explicitly asks for multiple artifacts. If one skill produces the needed output, do not also create a second artifact unless requested.
+Before adding or expanding a skill, review the existing skills' triggers, scopes, procedures, and output contracts. Extend the closest existing skill or clarify boundaries instead of introducing a competing skill for substantially the same deliverable.
 
 ## Learnings
 - This repo is a skill catalog, not an application runtime. Future sessions should not assume a build/test/lint pipeline exists unless an actual project manifest is added.
