@@ -42,6 +42,7 @@ So that [business benefit/value]
 - [3 to 5 specific, testable criteria; use Given/When/Then where appropriate]
 
 ```
+Save the complete Epic in Markdown format, to `/docs/plan/{epic-name}/epic.md`.
 
 ## Quality Checklist
 
@@ -53,3 +54,4 @@ So that [business benefit/value]
 - Include concrete values, units, boundaries, and error outcomes when they are known and relevant. Do not fabricate them when they are not known.
 - Resolve material ambiguity with the user rather than using unresolved placeholders such as `TBD` or inserting an unsupported assumption.
 - Confirm each acceptance criterion is specific, independently verifiable, and traceable to the requested outcome.
+- Confim the file is saved in the correct location and format, with the correct filename and extension.
