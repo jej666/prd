@@ -44,14 +44,13 @@ This repository does not define project-level build, test, or lint commands.
 - Default behavior: return Markdown in the chat response. Do not create files unless the user explicitly asks to save the result or the workflow requires a file artifact.
 - If a file artifact is required, use workspace-relative paths and create parent directories as needed.
 - For this repo, the default file paths are:
-  - epic docs: `docs/plan/{epic-name}/epic.md`
+  - epic docs: `docs/epics/{epic-name}/epic.md`
   - dod docs: `docs/dod/{dod-name}/dod.md`
 
 ## Skill catalog and selection guidance
 Use the skill that matches the deliverable the user needs:
 - `definition-of-done`: use when the user already has a feature, epic, or specification and needs a concise completion checklist.
 - `epic-authoring`: use when the user needs a user-focused epic with title, description, and acceptance criteria.
-- `specification-authoring`: use when the user needs a full technical specification with requirements, constraints, interfaces, and acceptance criteria.
 - `update-skills`: use when the user wants to preserve a repeatable repo learning, recurring pitfall, or important workflow pattern as durable guidance for future sessions.
 
 Avoid switching between multiple skills for the same request unless the user explicitly asks for multiple artifacts. If one skill produces the needed output, do not also create a second artifact unless requested.

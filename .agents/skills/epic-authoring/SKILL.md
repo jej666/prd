@@ -51,7 +51,7 @@ Use this skill when the user needs a user-focused epic that frames a feature or 
 
 ## File Output
 
-Default behavior is to return the epic content in the chat response. If the user explicitly asks to save the epic to a file, create the workspace-relative path `docs/plan/{epic-name}/epic.md` and save the Markdown there.
+Default behavior is to return the epic content in the chat response. If the user explicitly asks to save the epic to a file, create the workspace-relative path `docs/epics/{epic-name}/epic.md` and save the Markdown there.
 
 ## Quality Checklist
 
