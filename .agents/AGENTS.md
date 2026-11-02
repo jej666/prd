@@ -1,4 +1,4 @@
-﻿# Repository guidance for AI agents
+# Repository guidance for AI agents
 
 ## Repository purpose
 This repository is a lightweight package of custom Copilot skills for product-owner and specification-writing workflows. The primary source files are under `.agents/skills/<skill-name>/SKILL.md`.
@@ -52,6 +52,7 @@ Use the skill that matches the deliverable the user needs:
 - `definition-of-done`: use when the user already has a feature, epic, or specification and needs a concise completion checklist.
 - `epic-authoring`: use when the user needs a user-focused epic with title, description, and acceptance criteria.
 - `specification-authoring`: use when the user needs a full technical specification with requirements, constraints, interfaces, and acceptance criteria.
+- `update-skills`: use when the user wants to preserve a repeatable repo learning, recurring pitfall, or important workflow pattern as durable guidance for future sessions.
 
 Avoid switching between multiple skills for the same request unless the user explicitly asks for multiple artifacts. If one skill produces the needed output, do not also create a second artifact unless requested.
 Before adding or expanding a skill, review the existing skills' triggers, scopes, procedures, and output contracts. Extend the closest existing skill or clarify boundaries instead of introducing a competing skill for substantially the same deliverable.
@@ -60,4 +61,5 @@ Before adding or expanding a skill, review the existing skills' triggers, scopes
 - This repo is a skill catalog, not an application runtime. Future sessions should not assume a build/test/lint pipeline exists unless an actual project manifest is added.
 - Keep one canonical instruction location. Shared guidance belongs in `.agents/AGENTS.md`; duplicate `.github` instruction files create drift and confusing agent behavior.
 - Default to chat output for skills unless the user explicitly asks for a file artifact, and use repo-relative paths only when saving is required.
-- When multiple skills appear relevant, choose the one that matches the planned deliverable: completion checklist, epic, or technical specification. Avoid creating multiple artifacts in a single request unless the user asks for them.
+- When multiple skills appear relevant, choose the one that matches the planned deliverable: completion checklist, epic, specification, or durable repo-learning capture. Avoid creating multiple artifacts in a single request unless the user asks for them.
+- Preserve repeatable repo learnings with `update-skills` so future sessions do not rediscover the same pitfalls or duplicate guidance in the wrong location.
