@@ -39,7 +39,9 @@ I want [specific functionality]
 So that [business benefit/value]
 
 ## Acceptance Criteria
-- [3 to 5 specific, testable criteria; use Given/When/Then where appropriate]
+* [ ] [Criterion 1 — specific, testable outcome]
+* [ ] [Criterion 2]
+* [ ] [Criterion 3]
 
 ```
 
@@ -53,9 +55,11 @@ Default behavior is to return the epic content in the chat response. If the user
 
 ## Quality Checklist
 
-- All three sections are present, in order, and completed.
+- All three output sections are present, in order, and completed.
 - Define necessary acronyms or domain-specific terms inline; do not add a glossary section.
 - Use precise, explicit, unambiguous language and structured Markdown.
+- Cover the **happy path** and key **edge cases**.
+- Include **negative cases** where relevant (what should NOT happen).
 - Make the epic understandable on its own; avoid references that require unstated context or external documents.
 - Avoid idioms, metaphors, and context-dependent language.
 - Include concrete values, units, boundaries, and error outcomes when they are known and relevant. Do not fabricate them when they are not known.
