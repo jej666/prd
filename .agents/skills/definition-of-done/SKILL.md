@@ -18,4 +18,12 @@ Turn the user's specification purpose into a focused Definition of Done that mak
 
 ## Output Format
 
-Return only a bulleted list of at least 3 criteria. Use Markdown checkboxes (`- [ ]`) so each item can be marked done or not done. Do not include a heading, introduction, explanation, assumptions, or closing text.
+Return only a bulleted list of 8 to 12 criteria. Use Markdown checkboxes (`- [ ]`) so each item can be marked done or not done. Do not include a heading, introduction, explanation, assumptions, or closing text.
+
+## When to Use This Skill
+
+Use this skill when the user already has a feature, epic, or specification and needs a concise, objective completion checklist. Choose this instead of `epic-authoring` or `specification-authoring` when the need is to define done rather than to draft the underlying artifact itself.
+
+## File Output
+
+If the user explicitly asks to save the epic to a file, create the workspace-relative path `docs/dod/{dod-name}/dod.md` and save the Markdown there. By default, return the checklist in the chat response only.

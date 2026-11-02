@@ -42,7 +42,14 @@ So that [business benefit/value]
 - [3 to 5 specific, testable criteria; use Given/When/Then where appropriate]
 
 ```
-Save the complete Epic in Markdown format, to `/docs/plan/{epic-name}/epic.md`.
+
+## When to Use This Skill
+
+Use this skill when the user needs a user-focused epic that frames a feature or problem before implementation. Choose this when the deliverable is an epic narrative and acceptance criteria, not a broader technical specification or a completion checklist.
+
+## File Output
+
+Default behavior is to return the epic content in the chat response. If the user explicitly asks to save the epic to a file, create the workspace-relative path `docs/plan/{epic-name}/epic.md` and save the Markdown there.
 
 ## Quality Checklist
 

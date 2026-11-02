@@ -40,5 +40,23 @@ This repository does not define project-level build, test, or lint commands.
 - Keep Markdown output structured and explicit so the agent can reliably return the required format without ambiguity.
 - When adding or editing a skill, preserve the repo's emphasis on product-owner work, specification quality, and clear acceptance criteria.
 
-## Repository-local agent guidance
-No repo-local assistant files such as `AGENTS.md`, `CLAUDE.md`, `.cursorrules`, `.windsurfrules`, `CONVENTIONS.md`, or `.clinerules` were present before this file was added. This file intentionally serves as the shared instructions for agent-agnostic workflows in this repository.
+## Execution contract for skill output
+- Default behavior: return Markdown in the chat response. Do not create files unless the user explicitly asks to save the result or the workflow requires a file artifact.
+- If a file artifact is required, use workspace-relative paths and create parent directories as needed.
+- For this repo, the default file paths are:
+  - epic docs: `docs/plan/{epic-name}/epic.md`
+  - dod docs: `docs/dod/{dod-name}/dod.md`
+
+## Skill catalog and selection guidance
+Use the skill that matches the deliverable the user needs:
+- `definition-of-done`: use when the user already has a feature, epic, or specification and needs a concise completion checklist.
+- `epic-authoring`: use when the user needs a user-focused epic with title, description, and acceptance criteria.
+- `specification-authoring`: use when the user needs a full technical specification with requirements, constraints, interfaces, and acceptance criteria.
+
+Avoid switching between multiple skills for the same request unless the user explicitly asks for multiple artifacts. If one skill produces the needed output, do not also create a second artifact unless requested.
+
+## Learnings
+- This repo is a skill catalog, not an application runtime. Future sessions should not assume a build/test/lint pipeline exists unless an actual project manifest is added.
+- Keep one canonical instruction location. Shared guidance belongs in `.agents/AGENTS.md`; duplicate `.github` instruction files create drift and confusing agent behavior.
+- Default to chat output for skills unless the user explicitly asks for a file artifact, and use repo-relative paths only when saving is required.
+- When multiple skills appear relevant, choose the one that matches the planned deliverable: completion checklist, epic, or technical specification. Avoid creating multiple artifacts in a single request unless the user asks for them.
