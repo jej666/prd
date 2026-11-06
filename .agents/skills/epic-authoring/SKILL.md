@@ -8,6 +8,10 @@ argument-hint: "[epic purpose or feature]"
 
 Turn the user's feature or business need into a clear, actionable epic that a team can implement and verify.
 
+## When to Use This Skill
+
+Use this skill when the user needs a user-focused epic that frames a feature or problem before implementation. Choose this when the deliverable is an epic narrative and acceptance criteria, not a broader technical specification or a completion checklist.
+
 ## Procedure
 
 1. Treat the user's request or slash-command argument as the epic purpose. Identify the user/persona, requested functionality, and business value from the supplied context. Do not invent product behavior or unstated commitments.
@@ -15,11 +19,11 @@ Turn the user's feature or business need into a clear, actionable epic that a te
 3. Write an action-oriented, user-focused title that describes the outcome from the user's perspective. For example: "User can reset password via email."
 4. Write the description using exactly this structure:
 
-   ```text
+   \`\`\`text
    As a [user type/persona]
    I want [specific functionality]
    So that [business benefit/value]
-   ```
+   \`\`\`
 
 5. Write 3 to 5 acceptance criteria. Each criterion must describe one observable outcome that can be verified, and together they must cover the epic's stated outcome. Use Given/When/Then when it improves clarity. Include edge cases or error behavior only when supported by the request or needed to define the stated outcome; do not add implementation choices, thresholds, or failure behavior without evidence.
 6. If the supplied context does not support 3 to 5 distinct, testable criteria without padding or inventing behavior, ask a focused question instead of manufacturing criteria.
@@ -29,25 +33,38 @@ Turn the user's feature or business need into a clear, actionable epic that a te
 
 Return the epic using these sections, in order:
 
-```markdown
-## Title
-[Action-oriented, user-focused title]
+\`\`\`markdown
+   ## Title
+   [Action-oriented, user-focused title]
 
-## Description
-As a [user type/persona]
-I want [specific functionality]
-So that [business benefit/value]
+   ## Description
+   As a \\\[user type/persona]
+   I want \\\[specific functionality]
+   So that \\\[business benefit/value]
 
-## Acceptance Criteria
-* [ ] [Criterion 1 — specific, testable outcome]
-* [ ] [Criterion 2]
-* [ ] [Criterion 3]
+   ## Acceptance Criteria
+   * [ ] [Criterion 1 — specific, testable outcome]
+   \`\`\`gherkin
+      Given \\\[Context]
+      When  \\\[Event]
+      Then \\\[Expected outcome]
+   \`\`\`
 
-```
+   * [ ] [Criterion 2]
+   \`\`\`gherkin
+      Given \\\[Context]
+      When  \\\[Event]
+      Then \\\[Expected outcome]
+   \`\`\`
+   * [ ] [Criterion 3]
+   \`\`\`gherkin
+      Given \\\[Context]
+      When  \\\[Event]
+      Then \\\[Expected outcome]
+   \`\`\`
+\`\`\`
 
-## When to Use This Skill
-
-Use this skill when the user needs a user-focused epic that frames a feature or problem before implementation. Choose this when the deliverable is an epic narrative and acceptance criteria, not a broader technical specification or a completion checklist.
+Add as many uniquely identified criteria as needed. Keep each Gherkin keyword on its own line. Example rows are not approved criteria.
 
 ## File Output
 
